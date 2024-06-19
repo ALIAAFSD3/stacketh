@@ -9,17 +9,36 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/tailwindcss": "^0.2.1",
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@react-jvectormap/core": "^1.0.4",
+    "@react-jvectormap/unitedstates": "^1.0.1",
+    "@tremor/react": "^3.17.2",
     "@types/node": "20.6.2",
     "@types/react": "18.2.22",
     "@types/react-dom": "18.2.7",
+    "apexcharts": "^3.49.1",
     "autoprefixer": "10.4.15",
+    "axios": "^1.7.2",
+    "bcrypt": "^5.1.1",
     "eslint": "8.49.0",
     "eslint-config-next": "13.5.1",
+    "jsonwebtoken": "^9.0.2",
+    "jsvectormap": "^1.6.0",
+    "lucide-react": "^0.395.0",
+    "mongodb": "^6.7.0",
+    "mongoose": "^8.4.3",
     "next": "13.5.1",
-    "postcss": "8.4.30",
+    "postcss": "^8.4.30",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-jvectormap": "^0.0.16",
+    "tailwind-merge": "^2.3.0",
+    "tailwind-variants": "^0.2.1",
     "tailwindcss": "3.3.3",
-    "typescript": "5.2.2"
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "5.2.2",
+    "zustand": "^4.5.2"
   }
 }
