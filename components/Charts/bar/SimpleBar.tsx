@@ -67,7 +67,7 @@ const SimpleBar = () => {
           data={chartData}
           index="date"
           categories={["Average Pgas"]}
-          colors={["blue"]}
+          colors={["sky"]}
           valueFormatter={valueFormatter}
           yAxisWidth={48}
         />

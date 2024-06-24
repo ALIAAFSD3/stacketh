@@ -226,3 +226,42 @@ span.flatpickr-weekday,
     --ring: 142.4 71.8% 29.2%;
   }
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 30s linear infinite;
+}
+
+.coin-card {
+  display: inline-block;
+  min-width: 300px; /* Adjust based on your card width */
+  margin-right: 10px; /* Adjust based on your card spacing */
+}
+
+.ReactModalPortal{
+  color: #a7aad3;
+  background-color: #000000;
+  position: fixed;
+  top: 10%;
+  z-index: 1000;
+  width: 80%;
+  margin: 130px;
+}
+
+@media only screen and (max-width: 800px) {
+  .ReactModalPortal {
+    width: 98%;
+    margin: 5px;
+  }
+}
+

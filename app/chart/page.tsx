@@ -1,18 +1,41 @@
-"use client";
-import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
-import { AreaChart, SimpleBar, SimpleDonut } from "@/components/Charts";
+'use client'
+// pages/index.js
+import { useEffect, useState } from 'react';
 
-const Chart = () => {
+export default function Home() {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch('/api/b');
+        if (!response.ok) {
+          throw new Error(`Network response was not ok, status: ${response.status}`);
+        }
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        console.error('Failed to fetch data:', error);
+        setError(error);
+      }
+    }
+
+    fetchData();
+  }, []);
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  if (!data) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <>
-      <Breadcrumb pageName="Chart" />
-      <div className="space-y-5">
-        <SimpleBar />
-        <AreaChart />
-        <SimpleDonut />
-      </div>
-    </>
+    <div>
+      <h1>Dune Analytics Data</h1>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </div>
   );
-};
-
-export default Chart;
+}

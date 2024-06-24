@@ -60,7 +60,7 @@ const Home = () => {
         data={displayedData}
         index="date"
         categories={['FastGasPrice', 'SafeGasPrice']}
-        colors={['indigo', 'cyan']}
+        colors={['amber', 'cyan']}
         valueFormatter={valueFormatter}
       />
     </Card>

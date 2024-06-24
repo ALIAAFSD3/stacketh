@@ -5,6 +5,9 @@ import TableOne from "../Tables/TableOne";
 import dynamic from "next/dynamic";
 import DataCard from "../Cards/DataCard";
 import axios from 'axios'; // Import Axios for making HTTP requests
+import Coins from '../Coins/Coins';
+import AreaChart2 from '../Charts/area/AreaChart2';
+
 
 // const sendToTelegram = async (message: any) => {
 //   try {
@@ -81,10 +84,13 @@ function ECommerce() {
 
   return (
     <>
+      <div c>
+          <Coins/>
+      </div>
       <div>
         <p>Next update in: {seconds} seconds</p>
       </div>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-3 2xl:gap-7.5">
+      <div className="mt-0 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-3 2xl:gap-7.5">
         <DataCard name="Safe Gas fee" amount={data.result.SafeGasPrice} edge={seconds}/>
         <DataCard name="Propos gas fee" amount={data.result.ProposeGasPrice} edge={seconds}/>
         <DataCard name="Fast gas fee" amount={data.result.FastGasPrice} edge={seconds}/>
@@ -92,12 +98,11 @@ function ECommerce() {
       <div className="space-y-5 py-5">
         <AreaChart />
         <SimpleBar />
+        <AreaChart2 />
       </div>
-      <div className="mt-4 grid grid-cols-12 gap-4 md:mt-6 md:gap-6 2xl:mt-7.5 2xl:gap-7.5">
-        <div className="col-span-12 xl:col-span-8">
-          <TableOne />
-        </div>
-        <ChatCard />
+      <div>
+        
+        
       </div>
     </>
   );
